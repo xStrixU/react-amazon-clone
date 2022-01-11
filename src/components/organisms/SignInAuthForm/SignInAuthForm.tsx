@@ -29,7 +29,7 @@ export const SignInAuthForm = ({
     const auth = getAuth();
 
     signInWithEmailAndPassword(auth, email, password)
-      .then(auth => navigate('/'))
+      .then(() => navigate('/'))
       .catch(err => {
         switch (err.code) {
           case 'auth/user-not-found':

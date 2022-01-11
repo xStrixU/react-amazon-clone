@@ -27,10 +27,10 @@ export const SignUpAuthForm = ({
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<IFormInputs> = data => {
-    const { email, password, confirmPassword } = data;
+    const { email, password } = data;
 
     createUserWithEmailAndPassword(getAuth(), email, password)
-      .then(user => navigate('/'))
+      .then(() => navigate('/'))
       .catch(err => {
         switch (err.code) {
           case 'auth/weak-password':
