@@ -18,8 +18,8 @@ export const StyledInput = styled.input<{ error: boolean }>`
   ${({ error, theme }) => {
     if (error) {
       return css`
-        border: 1px solid ${({ theme }) => theme.errorRed};
-        box-shadow: ${({ theme }) => theme.errorBoxShadow};
+        border: 1px solid ${theme.errorRed};
+        box-shadow: ${theme.errorBoxShadow};
       `;
     }
 
